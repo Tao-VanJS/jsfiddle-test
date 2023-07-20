@@ -10,4 +10,4 @@ const Counter = () => {
   )
 }
 
-van.add(document.getElementById("demo-effect"), Counter())
+van.add(document.body, Counter())
