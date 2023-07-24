@@ -33,7 +33,7 @@ const streamOf = s => {
   for await (const v of streamOf(throttled)) {
     console.log("elapsed: ", v)
   }
-  // You can also chain the data stream with `map`, `filter`, etc. by integration with
+  // You can also chain the data stream with `map`, `filter`, etc. by integrating with
   // wu.js (https://fitzgen.github.io/wu.js/)
 })()
 
