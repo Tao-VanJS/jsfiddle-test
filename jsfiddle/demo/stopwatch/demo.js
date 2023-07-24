@@ -9,7 +9,7 @@ const Stopwatch = () => {
     button({onclick: start}, "Start"),
     button({onclick: () => (clearInterval(id), id = 0)}, "Stop"),
     button({onclick: () =>
-      (clearInterval(id), id = 0, elapsed.val = "0.00")}, "Reset"),
+      (clearInterval(id), id = 0, elapsed.val = 0)}, "Reset"),
   )
 }
 
