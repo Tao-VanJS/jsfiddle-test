@@ -20,12 +20,10 @@ const ConditionalBinding = () => {
       " d: ",
       input({type: "number", min: 0, max: 9, value: d, oninput: e => d.val = Number(e.target.value)}),
     ),
-    div(
-      "sum: ", () => {
-        triggeredTimes.textContent = Number(triggeredTimes.textContent) + 1
-        return formula.val === "a + b" ? a.val + b.val : c.val + d.val
-      }
-    ),
+    div("sum: ", () => {
+      triggeredTimes.textContent = Number(triggeredTimes.textContent) + 1
+      return formula.val === "a + b" ? a.val + b.val : c.val + d.val
+    }),
     div("Binding function triggered: ", triggeredTimes, " time(s)"),
   )
 }
