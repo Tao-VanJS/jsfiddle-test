@@ -4,10 +4,10 @@ const ConditionalDerive = () => {
   const formula = van.state("a + b")
   const a = van.state(1), b = van.state(2), c = van.state(3), d = van.state(4)
   const triggeredTimes = new Text(0)
-  const sum = () => {
+  const sum = van.derive(() => {
     triggeredTimes.textContent = Number(triggeredTimes.textContent) + 1
     return formula.val === "a + b" ? a.val + b.val : c.val + d.val
-  }
+  })
 
   return div(
     div(
