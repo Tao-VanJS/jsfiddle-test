@@ -4,7 +4,7 @@ const PackageLockInspector = () => {
   const json = van.state("")
   return [
     div("Paste the content of package-lock.json file here:"),
-    textarea({rows: 20, cols: 80, oninput: e => json.val = e.target.value}),
+    textarea({rows: 10, cols: 80, oninput: e => json.val = e.target.value}),
     () => {
       if (!json.val) return div()
       try {
